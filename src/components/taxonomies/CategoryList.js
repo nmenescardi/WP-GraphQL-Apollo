@@ -51,10 +51,9 @@ class CategoryList extends Component {
       categoryBox = 'loading...';
     }
 
-    console.log('categoryList', categoryBox);
     return (
       <div className="single-widget category-widget">
-        <h4 class="title">Post Categories</h4>
+        <h4 className="title">Post Categories</h4>
         <ul>{categoryBox}</ul>
       </div>
     );
