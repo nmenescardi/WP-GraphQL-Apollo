@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 export class SinglePostCard extends Component {
   render() {
     console.log('this.props', this.props);
-    const { id, title, excerpt, featuredImage } = this.props;
+    const { id, title, excerpt, featuredImage, date } = this.props;
+
+    const formattedDate = moment(date).format('MMMM DD, YYYY');
 
     const sourceUrl = featuredImage ? featuredImage.sourceUrl : '';
 
@@ -26,7 +29,7 @@ export class SinglePostCard extends Component {
           <div className="blog-meta">
             <a href="#" className="m-gap">
               <span className="lnr lnr-calendar-full" />
-              March 14, 2018
+              {formattedDate}
             </a>
             <a href="#" className="m-gap">
               <span className="lnr lnr-bubble" />
