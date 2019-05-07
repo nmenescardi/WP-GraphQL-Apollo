@@ -50,19 +50,7 @@ export class PostGrid extends Component {
       grid = 'loading...';
     }
 
-    return (
-      <div className="main-body section-gap">
-        <div className="container box_1170">
-          <div className="row">
-            <div className="col-lg-8 post-list">
-              <section className="post-area">
-                <div className="row">{grid}</div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+    return <div className="row">{grid}</div>;
   }
 }
 

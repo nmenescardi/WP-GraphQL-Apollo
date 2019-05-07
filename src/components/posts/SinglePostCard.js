@@ -31,15 +31,15 @@ export class SinglePostCard extends Component {
         </div>
         <div className="post-details">
           <h4>
-            <a href="#">{title}</a>
+            <a href="/#">{title}</a>
           </h4>
           <p>{excerptClean}</p>
           <div className="blog-meta">
-            <a href="#" className="m-gap">
+            <a href="/#" className="m-gap">
               <span className="lnr lnr-calendar-full" />
               {formattedDate}
             </a>
-            <a href="#" className="m-gap">
+            <a href="/#" className="m-gap">
               <span className="lnr lnr-bubble" />
               {numberOfComments}
             </a>
