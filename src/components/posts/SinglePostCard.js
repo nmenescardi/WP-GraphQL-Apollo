@@ -3,10 +3,18 @@ import moment from 'moment';
 
 export class SinglePostCard extends Component {
   render() {
-    console.log('this.props', this.props);
-    const { id, title, excerpt, featuredImage, date } = this.props;
+    //console.log('this.props', this.props);
+    const { title, excerpt, featuredImage, date, comments } = this.props;
 
     const formattedDate = moment(date).format('MMMM DD, YYYY');
+
+    // Only approved comments
+    const numberOfComments = comments.nodes.reduce((total, comment) => {
+      if (comment.approved) {
+        return total + 1;
+      }
+      return total;
+    }, 0);
 
     const sourceUrl = featuredImage ? featuredImage.sourceUrl : '';
 
@@ -33,7 +41,7 @@ export class SinglePostCard extends Component {
             </a>
             <a href="#" className="m-gap">
               <span className="lnr lnr-bubble" />
-              05
+              {numberOfComments}
             </a>
           </div>
         </div>

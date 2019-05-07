@@ -20,6 +20,11 @@ const GET_POSTS = gql`
         featuredImage {
           sourceUrl
         }
+        comments {
+          nodes {
+            approved
+          }
+        }
       }
     }
   }
@@ -30,7 +35,7 @@ export class PostGrid extends Component {
     return posts.map(post => {
       return (
         <div className="col-lg-6 col-md-6" key={post.id}>
-          <SinglePostCard key="" {...post} />
+          <SinglePostCard {...post} />
         </div>
       );
     });
@@ -46,11 +51,11 @@ export class PostGrid extends Component {
     }
 
     return (
-      <div class="main-body section-gap">
-        <div class="container box_1170">
-          <div class="row">
-            <div class="col-lg-8 post-list">
-              <section class="post-area">
+      <div className="main-body section-gap">
+        <div className="container box_1170">
+          <div className="row">
+            <div className="col-lg-8 post-list">
+              <section className="post-area">
                 <div className="row">{grid}</div>
               </section>
             </div>
