@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
-import bullet from '../../images/bullet.png';
+import bullet from '../../img/bullet.png';
 
 const GET_CATEGORIES = gql`
   query {
