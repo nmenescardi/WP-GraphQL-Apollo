@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PostGrid from '../components/posts/PostGrid';
 import CategoryList from '../components/taxonomies/CategoryList';
+import TagsCloud from '../components/taxonomies/TagsCloud';
+
 export class Homepage extends Component {
   render() {
     return (
@@ -12,10 +14,9 @@ export class Homepage extends Component {
                 <PostGrid />
               </section>
             </div>
-            <div className="col-lg-4 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbs">
-              <section className="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
-                <CategoryList />
-              </section>
+            <div className="col-lg-4 sidebar">
+              <CategoryList />
+              <TagsCloud />
             </div>
           </div>
         </div>
