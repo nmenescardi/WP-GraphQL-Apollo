@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PostGrid from '../components/posts/PostGrid';
 import CategoryList from '../components/taxonomies/CategoryList';
 import TagsCloud from '../components/taxonomies/TagsCloud';
+import UserBox from '../components/users/UserBox';
 
 export class Homepage extends Component {
   render() {
@@ -15,6 +16,7 @@ export class Homepage extends Component {
               </section>
             </div>
             <div className="col-lg-4 sidebar">
+              <UserBox />
               <CategoryList />
               <TagsCloud />
             </div>
