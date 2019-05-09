@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 export class SinglePostCard extends Component {
   render() {
     //console.log('this.props', this.props);
-    const { title, excerpt, featuredImage, date, comments } = this.props;
+    const { id, title, excerpt, featuredImage, date, comments } = this.props;
 
     const formattedDate = moment(date).format('MMMM DD, YYYY');
 
@@ -31,7 +32,7 @@ export class SinglePostCard extends Component {
         </div>
         <div className="post-details">
           <h4>
-            <a href="/#">{title}</a>
+            <Link to={`/post/:${id}`}>{title}</Link>
           </h4>
           <p>{excerptClean}</p>
           <div className="blog-meta">

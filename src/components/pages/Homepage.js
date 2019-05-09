@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PostGrid from '../components/posts/PostGrid';
-import CategoryList from '../components/taxonomies/CategoryList';
-import TagsCloud from '../components/taxonomies/TagsCloud';
-import UserBox from '../components/users/UserBox';
+import PostGrid from '../posts/PostGrid';
+import CategoryList from '../taxonomies/CategoryList';
+import TagsCloud from '../taxonomies/TagsCloud';
+import UserBox from '../users/UserBox';
 
 export class Homepage extends Component {
   render() {

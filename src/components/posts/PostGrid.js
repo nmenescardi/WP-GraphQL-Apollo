@@ -8,6 +8,7 @@ const GET_POSTS = gql`
     posts {
       nodes {
         id
+        postId
         title
         excerpt
         slug
