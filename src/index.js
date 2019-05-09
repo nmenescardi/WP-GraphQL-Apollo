@@ -11,12 +11,6 @@ import './styles/owl.carousel.css';
 import './styles/linearicons.css';
 import './fonts/Linearicons-Free.eot';
 
-/* Import all images */
-function importAll(r) {
-  return r.keys().map(r);
-}
-importAll(require.context('./img/', false, /\.(png|jpe?g|svg)$/));
-
 const client = new ApolloClient({
   uri: 'http://blackbird.estudiogenba.com/graphql'
 });
