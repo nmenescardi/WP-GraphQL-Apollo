@@ -1964,6 +1964,7 @@ h6 {
 
 .main-menu {
   padding: 20px 0px;
+  background: #7c32ff;
 }
 
 #header {
@@ -2101,7 +2102,7 @@ h6 {
   padding: 0 8px 0px 8px;
   text-decoration: none;
   display: inline-block;
-  color: #415094;
+  color: #fff;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
