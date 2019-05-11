@@ -1603,6 +1603,19 @@ h6 {
   border: none;
 }
 
+img.main-logo {
+  width: 200px;
+}
+
+nav#nav-menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header-container {
+}
+
 .confirm-checkbox {
   width: 16px;
   height: 16px;

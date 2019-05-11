@@ -27,21 +27,15 @@ class NavMenu extends Component {
       console.log('data', menuItems);
     }
     return (
-      <div className="main-menu">
-        <div className="row align-items-center justify-content-center d-flex">
-          <nav id="nav-menu-container">
-            <ul className="nav-menu">
-              {menuItems.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <a href={item.url}>{item.label}</a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <ul className="nav-menu">
+        {menuItems.map((item, index) => {
+          return (
+            <li key={index}>
+              <a href={item.url}>{item.label}</a>
+            </li>
+          );
+        })}
+      </ul>
     );
   }
 }
