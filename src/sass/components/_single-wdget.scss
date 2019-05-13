@@ -1,0 +1,27 @@
+/*
+  Common styles for sidebar widgets
+*/
+.single-widget {
+  padding: 30px;
+  margin-bottom: 30px;
+  background: $background-color-dark;
+
+  .title {
+    position: relative;
+    padding: 18px 0 15px;
+    color: $font-color-white;
+    border-bottom: 1px solid rgba(130, 139, 178, 0.4);
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 1px;
+      width: 50%;
+      background: $font-color-gray;
+      content: '';
+    }
+  }
+}

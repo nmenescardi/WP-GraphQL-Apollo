@@ -1,0 +1,24 @@
+.tags-widget {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 2px;
+      display: inline-block;
+      background: $background-color-gray;
+      padding: 5px 10px;
+      margin-bottom: 8px;
+      transition: $transition-all-mid;
+
+      &:hover a {
+        color: $brand-color-purple;
+      }
+
+      a {
+        font-weight: 300;
+        color: $font-color-gray;
+      }
+    }
+  }
+}

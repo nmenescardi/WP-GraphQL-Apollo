@@ -1,0 +1,40 @@
+header {
+  .main-menu {
+    padding: 20px 0px;
+    background: $brand-color-purple;
+
+    nav#nav-menu-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+
+      img.main-logo {
+        width: 175px;
+      }
+    }
+    .nav-menu {
+      display: flex;
+
+      & > li {
+        margin-left: 10px;
+
+        a {
+          padding: 0 8px 0px 8px;
+          text-decoration: none;
+          display: inline-block;
+          color: $font-color-white;
+          font-weight: 600;
+          font-size: 13px;
+          text-transform: uppercase;
+          outline: none;
+        }
+
+        &:hover > a {
+          color: $font-color-light-gray;
+        }
+      }
+    }
+  }
+}
