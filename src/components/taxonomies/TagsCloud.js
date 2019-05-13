@@ -26,12 +26,9 @@ class TagsCloud extends Component {
 
   render() {
     const { loading, tags } = this.props.data;
-    let tagsCloudBox = '';
-    if (!loading) {
-      tagsCloudBox = this.renderTagsCloud(tags.nodes);
-    } else {
-      tagsCloudBox = 'loading...';
-    }
+    const tagsCloudBox = loading
+      ? 'loading...'
+      : this.renderTagsCloud(tags.nodes);
 
     return (
       <div className="single-widget tags-widget">
