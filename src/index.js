@@ -5,8 +5,6 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/animate.min.css';
-import './styles/owl.carousel.css';
 import './styles/linearicons.css';
 import './fonts/Linearicons-Free.eot';
 

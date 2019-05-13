@@ -20,9 +20,7 @@ class UserBox extends Component {
     return (
       <div className="single-widget protfolio-widget">
         <img className="img-fluid" src={user.avatar.url} alt="" />
-        <a href="/#">
-          <h4 className="title">{`${user.firstName} ${user.lastName}`}</h4>
-        </a>
+        <h4 className="title">{`${user.firstName} ${user.lastName}`}</h4>
         <p className="p-text">{user.description}</p>
       </div>
     );
