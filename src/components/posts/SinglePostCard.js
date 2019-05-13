@@ -6,7 +6,6 @@ import { FaRegComment } from 'react-icons/fa';
 
 export class SinglePostCard extends Component {
   render() {
-    //console.log('this.props', this.props);
     const { id, title, excerpt, featuredImage, date, comments } = this.props;
 
     const formattedDate = moment(date).format('MMMM DD, YYYY');
