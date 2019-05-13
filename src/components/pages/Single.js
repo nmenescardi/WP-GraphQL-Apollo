@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import PageHeader from '../layout/PageHeader';
+import MainSidebar from '../layout/MainSidebar';
+import SinglePostContent from '../posts/SinglePostContent';
 
 const GET_SINGLE_POST = gql`
   query {
@@ -18,10 +20,17 @@ export class Single extends Component {
     const { match, data } = this.props;
 
     console.log('props.data', data);
+
+    //match.params.id
     return (
       <Fragment>
         <PageHeader />
-        Single Page for : {match.params.id}
+        <section className="col-lg-8">
+          <SinglePostContent />
+        </section>
+        <aside className="col-lg-4 sidebar">
+          <MainSidebar />
+        </aside>
       </Fragment>
     );
   }
