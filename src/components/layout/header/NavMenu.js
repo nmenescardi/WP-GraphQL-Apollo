@@ -18,13 +18,11 @@ const GET_MENU_ITEMS = gql`
 class NavMenu extends Component {
   render() {
     const { loading, menu } = this.props.data;
-    let menuItems;
 
-    if (loading) {
-      menuItems = [{ url: '', label: 'loading...' }];
-    } else {
-      menuItems = menu.menuItems.nodes;
-    }
+    const menuItems = loading
+      ? [{ url: '', label: 'loading...' }]
+      : menu.menuItems.nodes;
+
     return (
       <ul className="nav-menu">
         {menuItems.map((item, index) => {
