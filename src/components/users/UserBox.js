@@ -28,12 +28,7 @@ class UserBox extends Component {
 
   render() {
     const { loading, user } = this.props.data;
-    let mainUserBox = '';
-    if (!loading) {
-      mainUserBox = this.renderUserBox(user);
-    } else {
-      mainUserBox = 'loading...';
-    }
+    const mainUserBox = loading ? 'loading...' : this.renderUserBox(user);
 
     return <div className="user-box-container">{mainUserBox}</div>;
   }
