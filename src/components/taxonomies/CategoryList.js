@@ -44,12 +44,9 @@ class CategoryList extends Component {
 
   render() {
     const { loading, categories } = this.props.data;
-    let categoryBox = '';
-    if (!loading) {
-      categoryBox = this.renderCategoryList(categories.nodes);
-    } else {
-      categoryBox = 'loading...';
-    }
+    const categoryBox = loading
+      ? 'loading...'
+      : this.renderCategoryList(categories.nodes);
 
     return (
       <div className="single-widget category-widget">
