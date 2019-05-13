@@ -11,6 +11,18 @@ const GET_SINGLE_POST = gql`
       id
       postId
       title
+      excerpt
+      slug
+      content
+      author {
+        id
+        nickname
+        slug
+      }
+      date
+      featuredImage {
+        sourceUrl
+      }
     }
   }
 `;
@@ -19,18 +31,24 @@ export class Single extends Component {
   render() {
     const { match, data } = this.props;
 
-    console.log('props.data', data);
+    //console.log('props.data', data);
 
     //match.params.id
     return (
       <Fragment>
         <PageHeader />
-        <section className="col-lg-8">
-          <SinglePostContent />
+        <section className="blog-single section-gap">
+          <div className="container">
+            <div className="row">
+              <main className="col-lg-8">
+                {!data.loading && <SinglePostContent {...data} />}
+              </main>
+              <aside className="col-lg-4 sidebar">
+                <MainSidebar />
+              </aside>
+            </div>
+          </div>
         </section>
-        <aside className="col-lg-4 sidebar">
-          <MainSidebar />
-        </aside>
       </Fragment>
     );
   }
