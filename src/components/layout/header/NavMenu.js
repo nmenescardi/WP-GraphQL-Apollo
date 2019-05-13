@@ -24,7 +24,6 @@ class NavMenu extends Component {
       menuItems = [{ url: '', label: 'loading...' }];
     } else {
       menuItems = menu.menuItems.nodes;
-      console.log('data', menuItems);
     }
     return (
       <ul className="nav-menu">
