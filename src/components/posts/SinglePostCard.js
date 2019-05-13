@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import { FaRegCalendarAlt } from 'react-icons/fa';
+import { FaRegComment } from 'react-icons/fa';
 
 export class SinglePostCard extends Component {
   render() {
@@ -37,11 +39,11 @@ export class SinglePostCard extends Component {
           <p>{excerptClean}</p>
           <div className="blog-meta">
             <a href="/#" className="m-gap">
-              <span className="lnr lnr-calendar-full" />
+              <FaRegCalendarAlt className="small-icon" size="1.2em" />
               {formattedDate}
             </a>
             <a href="/#" className="m-gap">
-              <span className="lnr lnr-bubble" />
+              <FaRegComment className="small-icon" size="1.2em" />
               {numberOfComments}
             </a>
           </div>
