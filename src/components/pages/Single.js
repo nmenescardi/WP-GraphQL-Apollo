@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
+import PageHeader from '../layout/PageHeader';
 
 const GET_SINGLE_POST = gql`
   query {
@@ -17,7 +18,12 @@ export class Single extends Component {
     const { match, data } = this.props;
 
     console.log('props.data', data);
-    return <Fragment>Single Page for : {match.params.id}</Fragment>;
+    return (
+      <Fragment>
+        <PageHeader />
+        Single Page for : {match.params.id}
+      </Fragment>
+    );
   }
 }
 export default graphql(GET_SINGLE_POST)(Single);

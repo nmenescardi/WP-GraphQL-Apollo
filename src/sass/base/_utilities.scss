@@ -1,14 +1,15 @@
 /*
   Utilities
 */
-.align-items-center {
-  align-items: center !important;
+
+.relative {
+  position: relative;
 }
 
-.justify-content-between {
-  justify-content: space-between !important;
-}
-
-.d-flex {
-  display: flex !important;
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
