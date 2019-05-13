@@ -17,7 +17,7 @@ class TagsCloud extends Component {
   renderTagsCloud(tags) {
     return tags.map(tag => {
       return (
-        <li key={tag.slug} style={{ margin: 2 }}>
+        <li key={tag.slug}>
           <a href="/#">{tag.name}</a>
         </li>
       );
@@ -36,7 +36,7 @@ class TagsCloud extends Component {
     return (
       <div className="single-widget tags-widget">
         <h4 className="title">Post Tags</h4>
-        <ul style={{ display: 'flex', flexWrap: 'wrap' }}>{tagsCloudBox}</ul>
+        <ul>{tagsCloudBox}</ul>
       </div>
     );
   }
