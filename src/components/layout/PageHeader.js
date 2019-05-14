@@ -10,11 +10,11 @@ const PageHeader = () => {
           <div className="about-content col-lg-12">
             <h1 className="text-white">Blog Post Details</h1>
             <p className="text-white link-nav">
-              <a href="index.html">Home </a>
+              <a href="/">Home </a>
               <FaArrowRight />
-              <a href="#!"> Blog</a>
+              <a href="/blog/">Blog</a>
               <FaArrowRight />
-              <a href="blog-details.html"> Blog Details</a>
+              <span>Single Post</span>
             </p>
           </div>
         </div>
