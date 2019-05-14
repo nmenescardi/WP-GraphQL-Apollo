@@ -10,12 +10,12 @@ html > body {
   line-height: 24px;
   position: relative;
 
-  html > body h1,
-  html > body h2,
-  html > body h3,
-  html > body h4,
-  html > body h5,
-  html > body h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Rubik', sans-serif;
     color: $font-color-black;
     line-height: 1.2em;
@@ -78,26 +78,6 @@ html > body {
   .single-post-carousel:hover .post-details h2 a,
   .single-post-item:hover .post-details h4 a,
   .popular-posts-widget .single-popular-post:hover h6 a {
-    background: -webkit-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    background: -moz-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    background: -o-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    background: -ms-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
     background: linear-gradient(
       90deg,
       $brand-color-purple 0%,

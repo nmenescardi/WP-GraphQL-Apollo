@@ -16,12 +16,31 @@ const GET_SINGLE_POST = gql`
       content
       author {
         id
-        nickname
-        slug
+        firstName
+        lastName
+        avatar {
+          url
+        }
       }
       date
       featuredImage {
         sourceUrl
+      }
+      categories {
+        edges {
+          node {
+            name
+            slug
+          }
+        }
+      }
+      tags {
+        edges {
+          node {
+            name
+            slug
+          }
+        }
       }
     }
   }
@@ -30,8 +49,6 @@ const GET_SINGLE_POST = gql`
 export class Single extends Component {
   render() {
     const { match, data } = this.props;
-
-    //console.log('props.data', data);
 
     //match.params.id
     return (

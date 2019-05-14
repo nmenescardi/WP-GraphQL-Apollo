@@ -3,6 +3,7 @@
 */
 
 @import 'sass/abstracts/variables';
+@import 'sass/abstracts/mixins';
 @import 'sass/base/common';
 @import 'sass/base/reset';
 @import 'sass/base/utilities';
@@ -13,3 +14,5 @@
 @import 'sass/components/user-box';
 @import 'sass/components/category-widget';
 @import 'sass/components/tags-cloud-widget';
+@import 'sass/components/taxonomy-list';
+@import 'sass/pages/single-post';

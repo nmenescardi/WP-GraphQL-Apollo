@@ -12,7 +12,7 @@ const PageHeader = () => {
             <p className="text-white link-nav">
               <a href="index.html">Home </a>
               <FaArrowRight />
-              <a href="#"> Blog</a>
+              <a href="#!"> Blog</a>
               <FaArrowRight />
               <a href="blog-details.html"> Blog Details</a>
             </p>
