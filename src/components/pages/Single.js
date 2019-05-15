@@ -6,8 +6,8 @@ import MainSidebar from '../layout/MainSidebar';
 import SinglePostContent from '../posts/SinglePostContent';
 
 const GET_SINGLE_POST = gql`
-  query {
-    post(id: ":cG9zdDo1OTY=") {
+  query($postID: ID!) {
+    post(id: $postID) {
       id
       postId
       title
@@ -48,9 +48,8 @@ const GET_SINGLE_POST = gql`
 
 export class Single extends Component {
   render() {
-    const { match, data } = this.props;
+    const { data } = this.props;
 
-    //match.params.id
     return (
       <Fragment>
         <PageHeader />
@@ -70,4 +69,7 @@ export class Single extends Component {
     );
   }
 }
-export default graphql(GET_SINGLE_POST)(Single);
+
+export default graphql(GET_SINGLE_POST, {
+  options: props => ({ variables: { postID: props.match.params.id } })
+})(Single);

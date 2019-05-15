@@ -1,9 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import moment from 'moment';
 
 const SinglePostContent = ({ loading, post }) => {
-  console.log('post', post);
-
   const formattedDate = moment(post.date).format('DD MMMM, YYYY');
   return (
     <div className="single-blog-content-container">
