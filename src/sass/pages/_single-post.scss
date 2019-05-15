@@ -45,4 +45,21 @@
       }
     }
   }
+
+  .main-content {
+    * {
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 14px;
+    }
+    a {
+      color: $font-color-dark-blue;
+      font-weight: 600;
+
+      &:hover {
+        color: $font-color-gray;
+      }
+    }
+  }
 }
