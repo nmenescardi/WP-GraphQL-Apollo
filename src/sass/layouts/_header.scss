@@ -10,8 +10,16 @@ header {
       width: 100%;
       margin: 0;
 
-      img.main-logo {
-        width: 175px;
+      .main-logo-link {
+        width: 130px;
+
+        svg {
+          fill: $font-color-white;
+        }
+
+        &:hover > svg {
+          fill: $font-color-light-gray;
+        }
       }
     }
     .nav-menu {
@@ -25,10 +33,11 @@ header {
           text-decoration: none;
           display: inline-block;
           color: $font-color-white;
-          font-weight: 600;
+          //font-weight: 600;
           font-size: 13px;
           text-transform: uppercase;
           outline: none;
+          letter-spacing: 0.1rem;
         }
 
         &:hover > a {

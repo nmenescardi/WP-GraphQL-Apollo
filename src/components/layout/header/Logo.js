@@ -1,9 +1,11 @@
 import React from 'react';
-//import logo from '../../../img/logo-blackbird.png';
+import apolloLogo from '../../../svg/apollo-logo';
 
 const Logo = () => {
   return (
-    <a href="/">{/* <img className="main-logo" src={logo} alt="logo" /> */}</a>
+    <a className="main-logo-link" href="/">
+      {apolloLogo}
+    </a>
   );
 };
 
