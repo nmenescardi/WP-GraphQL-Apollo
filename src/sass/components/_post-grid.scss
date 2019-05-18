@@ -1,10 +1,10 @@
 .PostGrid {
-  .single-post-item {
+  .SinglePostCard {
     position: relative;
     z-index: 1;
     margin-bottom: 80px;
 
-    .post-thumb {
+    &__thumb {
       overflow: hidden;
       img {
         min-height: 600px;
@@ -14,11 +14,11 @@
       }
     }
 
-    &:hover .post-thumb img {
+    &:hover .SinglePostCard__thumb img {
       transform: scale(1.1);
     }
 
-    .post-details {
+    &__details {
       position: absolute;
       left: 30px;
       bottom: -30px;
@@ -35,16 +35,17 @@
           color: $font-color-dark-blue;
         }
       }
-      .blog-meta {
-        margin-top: 15px;
-        .m-gap {
-          padding-right: 20px;
-          color: $font-color-gray;
+    }
+    &__meta {
+      margin-top: 15px;
 
-          .small-icon {
-            margin-right: 8px;
-            margin-bottom: 5px;
-          }
+      &--item {
+        padding-right: 20px;
+        color: $font-color-gray;
+
+        svg {
+          margin-right: 8px;
+          margin-bottom: 5px;
         }
       }
     }

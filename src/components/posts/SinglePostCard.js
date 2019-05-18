@@ -27,24 +27,23 @@ export class SinglePostCard extends Component {
       .slice(0, 90)
       .concat('...');
 
-    //TODO BEM
     return (
-      <div className="single-post-item">
-        <div className="post-thumb">
+      <div className="SinglePostCard">
+        <div className="SinglePostCard__thumb">
           <img className="img-fluid" src={sourceUrl} alt="" />
         </div>
-        <div className="post-details">
+        <div className="SinglePostCard__details">
           <h4>
             <Link to={`/post/:${id}`}>{title}</Link>
           </h4>
           <p>{excerptClean}</p>
-          <div className="blog-meta">
-            <a href="/#" className="m-gap">
-              <FaRegCalendarAlt className="small-icon" size="1.2em" />
+          <div className="SinglePostCard__meta">
+            <a href="/#" className="SinglePostCard__meta--item">
+              <FaRegCalendarAlt size="1.2em" />
               {formattedDate}
             </a>
-            <a href="/#" className="m-gap">
-              <FaRegComment className="small-icon" size="1.2em" />
+            <a href="/#" className="SinglePostCard__meta--item">
+              <FaRegComment size="1.2em" />
               {numberOfComments}
             </a>
           </div>
