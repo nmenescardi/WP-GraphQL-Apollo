@@ -18,20 +18,21 @@ const GET_USER_BY_ID = gql`
 class UserBox extends Component {
   renderUserBox(user) {
     return (
-      <div className="single-widget protfolio-widget">
+      <div className="single-widget">
         <img className="img-fluid" src={user.avatar.url} alt="" />
-        <h4 className="title">{`${user.firstName} ${user.lastName}`}</h4>
-        <p className="p-text">{user.description}</p>
+        <h4 className="single-widget__title">{`${user.firstName} ${
+          user.lastName
+        }`}</h4>
+        <p className="UserBox__description">{user.description}</p>
       </div>
     );
   }
 
   render() {
-    //TODO BEM
     const { loading, user } = this.props.data;
     const mainUserBox = loading ? 'loading...' : this.renderUserBox(user);
 
-    return <div className="user-box-container">{mainUserBox}</div>;
+    return <div className="UserBox">{mainUserBox}</div>;
   }
 }
 

@@ -25,15 +25,14 @@ class TagsCloud extends Component {
   }
 
   render() {
-    //TODO BEM
     const { loading, tags } = this.props.data;
     const tagsCloudBox = loading
       ? 'loading...'
       : this.renderTagsCloud(tags.nodes);
 
     return (
-      <div className="single-widget tags-widget">
-        <h4 className="title">Post Tags</h4>
+      <div className="TagsCloud single-widget">
+        <h4 className="single-widget__title">Post Tags</h4>
         <ul>{tagsCloudBox}</ul>
       </div>
     );
