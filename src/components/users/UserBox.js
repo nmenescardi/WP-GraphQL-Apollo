@@ -27,6 +27,7 @@ class UserBox extends Component {
   }
 
   render() {
+    //TODO BEM
     const { loading, user } = this.props.data;
     const mainUserBox = loading ? 'loading...' : this.renderUserBox(user);
 

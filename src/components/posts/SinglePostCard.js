@@ -26,6 +26,8 @@ export class SinglePostCard extends Component {
       .replace('[&hellip;]', '')
       .slice(0, 90)
       .concat('...');
+
+    //TODO BEM
     return (
       <div className="single-post-item">
         <div className="post-thumb">

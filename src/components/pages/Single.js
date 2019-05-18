@@ -48,6 +48,7 @@ const GET_SINGLE_POST = gql`
 
 export class Single extends Component {
   render() {
+    //TODO BEM
     const { data } = this.props;
 
     return (

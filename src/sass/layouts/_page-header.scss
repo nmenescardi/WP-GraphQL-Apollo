@@ -1,4 +1,4 @@
-.banner-area {
+.PageHeader {
   background: linear-gradient(
       0deg,
       rgba(128, 80, 250, 0.8),
@@ -7,7 +7,7 @@
     url(./img/banner-bg.jpg) no-repeat center;
   background-size: cover;
 
-  .about-content {
+  &__details {
     padding: 110px 0px;
     text-align: center;
 
@@ -17,7 +17,7 @@
       letter-spacing: 0.1rem;
     }
 
-    .link-nav {
+    &__nav {
       margin-top: 10px;
 
       a {

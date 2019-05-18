@@ -3,7 +3,7 @@ import Copyright from './Copyright';
 
 const Footer = () => {
   return (
-    <footer class="Footer">
+    <footer className="Footer">
       <Copyright />
     </footer>
   );

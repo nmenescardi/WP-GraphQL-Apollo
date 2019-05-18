@@ -43,6 +43,7 @@ class CategoryList extends Component {
   }
 
   render() {
+    //TODO BEM
     const { loading, categories } = this.props.data;
     const categoryBox = loading
       ? 'loading...'

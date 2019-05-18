@@ -1,48 +1,46 @@
-header {
-  .main-menu {
-    padding: 20px 0px;
-    background: $brand-color-purple;
+.Header {
+  padding: 20px 0px;
+  background: $brand-color-purple;
 
-    nav#nav-menu-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin: 0;
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
 
-      .Logo {
-        width: 130px;
+    .Logo {
+      width: 130px;
 
-        svg {
-          fill: $font-color-white;
-        }
+      svg {
+        fill: $font-color-white;
+      }
 
-        &:hover > svg {
-          fill: $font-color-light-gray;
-        }
+      &:hover > svg {
+        fill: $font-color-light-gray;
       }
     }
-    .NavMenu {
-      display: flex;
+  }
+  .NavMenu {
+    display: flex;
 
-      & > li {
-        margin-left: 10px;
+    & > li {
+      margin-left: 10px;
 
-        a {
-          padding: 0 8px 0px 8px;
-          text-decoration: none;
-          display: inline-block;
-          color: $font-color-white;
-          //font-weight: 600;
-          font-size: 13px;
-          text-transform: uppercase;
-          outline: none;
-          letter-spacing: 0.1rem;
-        }
+      a {
+        padding: 0 8px 0px 8px;
+        text-decoration: none;
+        display: inline-block;
+        color: $font-color-white;
+        //font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        outline: none;
+        letter-spacing: 0.1rem;
+      }
 
-        &:hover > a {
-          color: $font-color-light-gray;
-        }
+      &:hover > a {
+        color: $font-color-light-gray;
       }
     }
   }

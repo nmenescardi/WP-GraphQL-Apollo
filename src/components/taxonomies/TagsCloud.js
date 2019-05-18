@@ -25,6 +25,7 @@ class TagsCloud extends Component {
   }
 
   render() {
+    //TODO BEM
     const { loading, tags } = this.props.data;
     const tagsCloudBox = loading
       ? 'loading...'

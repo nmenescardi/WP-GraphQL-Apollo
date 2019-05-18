@@ -4,6 +4,7 @@ import MainSidebar from '../layout/MainSidebar';
 
 export class Homepage extends Component {
   render() {
+    //TODO BEM
     return (
       <main className="main-body section-gap">
         <div className="container">

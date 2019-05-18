@@ -3,6 +3,7 @@ import moment from 'moment';
 
 const SinglePostContent = ({ loading, post }) => {
   const formattedDate = moment(post.date).format('DD MMMM, YYYY');
+  //TODO BEM
   return (
     <div className="single-blog-content-container">
       <img
