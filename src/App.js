@@ -4,6 +4,7 @@ import Homepage from './components/pages/Homepage';
 import Single from './components/pages/Single';
 import BlogArchive from './components/pages/BlogArchive';
 import Header from './components/layout/header/Header';
+import Footer from './components/layout/footer/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export const App = () => (
@@ -14,5 +15,6 @@ export const App = () => (
       <Route exact path="/post/:id" component={Single} />
       <Route exact path="/blog/" component={BlogArchive} />
     </Switch>
+    <Footer />
   </Router>
 );
