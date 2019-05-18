@@ -1,11 +1,11 @@
-footer {
+.Footer {
   padding: 50px 0;
   background-color: $background-color-dark;
 
-  .footer-copyright-container {
+  .Copyright {
     text-align: center;
 
-    .colorlib-link {
+    &__colorlib-link {
       color: $brand-color-purple;
     }
   }

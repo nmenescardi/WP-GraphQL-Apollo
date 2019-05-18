@@ -1,10 +1,10 @@
 import React from 'react';
-import FooterCopyright from './FooterCopyright';
+import Copyright from './Copyright';
 
 const Footer = () => {
   return (
-    <footer>
-      <FooterCopyright />
+    <footer class="Footer">
+      <Copyright />
     </footer>
   );
 };

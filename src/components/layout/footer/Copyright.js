@@ -1,14 +1,14 @@
 import React from 'react';
 
-const FooterCopyright = () => {
+const Copyright = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="footer-copyright-container">
-      <p className="copyright-text">
+    <div className="Copyright">
+      <p className="Copyright__text">
         Copyright {currentYear} © All rights reserved | This template is made
         using{' '}
         <a
-          className="colorlib-link"
+          className="Copyright__colorlib-link"
           href="https://colorlib.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -20,4 +20,4 @@ const FooterCopyright = () => {
   );
 };
 
-export default FooterCopyright;
+export default Copyright;
