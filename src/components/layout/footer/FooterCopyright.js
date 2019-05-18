@@ -11,6 +11,7 @@ const FooterCopyright = () => {
           className="colorlib-link"
           href="https://colorlib.com"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Colorlib
         </a>
