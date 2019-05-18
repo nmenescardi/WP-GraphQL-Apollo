@@ -4,15 +4,14 @@ import MainSidebar from '../layout/MainSidebar';
 
 export class Homepage extends Component {
   render() {
-    //TODO BEM
     return (
-      <main className="main-body section-gap">
+      <main className="Homepage section-gap">
         <div className="container">
           <div className="row">
-            <section className="col-lg-8 post-list-container">
+            <section className="col-lg-8">
               <PostGrid />
             </section>
-            <aside className="col-lg-4 sidebar">
+            <aside className="col-lg-4">
               <MainSidebar />
             </aside>
           </div>

@@ -46,7 +46,11 @@ export class PostGrid extends Component {
     const { loading, posts } = this.props.data;
     const grid = loading ? 'loading...' : this.renderGrid(posts.nodes);
 
-    return <div className="row">{grid}</div>;
+    return (
+      <div className="PostGrid">
+        <div className="row">{grid}</div>
+      </div>
+    );
   }
 }
 
