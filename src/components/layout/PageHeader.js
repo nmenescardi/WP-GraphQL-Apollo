@@ -2,6 +2,7 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
 const PageHeader = () => {
+  //TODO BEM
   return (
     <section className="banner-area relative">
       <div className="overlay overlay-bg" />

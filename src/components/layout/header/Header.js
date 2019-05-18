@@ -3,6 +3,7 @@ import Logo from './Logo';
 import NavMenu from './NavMenu';
 
 const Header = () => {
+  //TODO: BEM
   return (
     <header>
       <div className="main-menu header-container">

@@ -24,7 +24,7 @@ class NavMenu extends Component {
       : menu.menuItems.nodes;
 
     return (
-      <ul className="nav-menu">
+      <ul className="NavMenu">
         {menuItems.map((item, index) => {
           return (
             <li key={index}>

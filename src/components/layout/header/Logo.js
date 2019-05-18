@@ -3,7 +3,7 @@ import apolloLogo from '../../../svg/apollo-logo';
 
 const Logo = () => {
   return (
-    <a className="main-logo-link" href="/">
+    <a className="Logo" href="/">
       {apolloLogo}
     </a>
   );

@@ -10,7 +10,7 @@ header {
       width: 100%;
       margin: 0;
 
-      .main-logo-link {
+      .Logo {
         width: 130px;
 
         svg {
@@ -22,7 +22,7 @@ header {
         }
       }
     }
-    .nav-menu {
+    .NavMenu {
       display: flex;
 
       & > li {
