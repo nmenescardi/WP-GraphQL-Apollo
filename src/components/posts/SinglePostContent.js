@@ -3,25 +3,22 @@ import moment from 'moment';
 
 const SinglePostContent = ({ loading, post }) => {
   const formattedDate = moment(post.date).format('DD MMMM, YYYY');
-  //TODO BEM
   return (
-    <div className="single-blog-content-container">
+    <div className="SinglePostContent">
       <img
         className="img-fluid"
         src={post.featuredImage.sourceUrl}
         alt={post.title}
       />
-      <h4 className="post-title">{post.title}</h4>
-      <div className="meta-details">
-        <div className="taxonomy-container">
-          {taxonomyList(post.categories.edges)}
-        </div>
-        <div className="author-data-wrapper">
-          <div className="media-body">
+      <h4 className="SinglePostContent__title">{post.title}</h4>
+      <div className="SinglePostContent__meta meta-box">
+        <div>{taxonomyList(post.categories.edges)}</div>
+        <div className="meta-box__author">
+          <div className="meta-box__info">
             <h5>{`${post.author.firstName} ${post.author.lastName}`}</h5>
             <p>{formattedDate}</p>
           </div>
-          <div className="author-img-wrapper">
+          <div className="meta-box__img">
             <img
               className="img-fluid"
               src={post.author.avatar.url}
@@ -31,10 +28,10 @@ const SinglePostContent = ({ loading, post }) => {
         </div>
       </div>
       <div
-        className="main-content"
+        className="SinglePostContent__content"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
-      <div className="tags">{taxonomyList(post.tags.edges)}</div>
+      <div>{taxonomyList(post.tags.edges)}</div>
     </div>
   );
 };

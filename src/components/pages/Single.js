@@ -48,19 +48,18 @@ const GET_SINGLE_POST = gql`
 
 export class Single extends Component {
   render() {
-    //TODO BEM
     const { data } = this.props;
 
     return (
       <Fragment>
         <PageHeader />
-        <section className="blog-single section-gap">
+        <section className="Single section-gap">
           <div className="container">
             <div className="row">
               <main className="col-lg-8">
                 {!data.loading && <SinglePostContent {...data} />}
               </main>
-              <aside className="col-lg-4 sidebar">
+              <aside className="col-lg-4">
                 <MainSidebar />
               </aside>
             </div>
