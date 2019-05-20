@@ -45,7 +45,7 @@ export class FeaturedPosts extends Component {
 
     return (
       <div className="FeaturedPosts">
-        <div className="row">{grid}</div>
+        <div className="row no-gutters row-eq-height">{grid}</div>
       </div>
     );
   }

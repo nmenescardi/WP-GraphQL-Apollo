@@ -13,11 +13,11 @@ export class Homepage extends Component {
             <section className="col-lg-12">
               <BreakingNewsPosts />
             </section>
-            <section className="col-lg-12">
-              <FeaturedPosts />
-            </section>
           </div>
         </div>
+        <section className="full-width">
+          <FeaturedPosts />
+        </section>
         <div className="container">
           <div className="row">
             <section className="col-lg-8">

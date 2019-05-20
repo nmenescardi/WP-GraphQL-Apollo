@@ -25,6 +25,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+%overlay-opacity {
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background: $overlay-color-black;
+    opacity: 0.6;
+  }
+}
+
 @mixin overlay-hero-with-img($imgPath: './img/banner-bg.jpg') {
   background: linear-gradient(
       0deg,
