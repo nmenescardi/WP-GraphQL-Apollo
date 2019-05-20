@@ -1,13 +1,13 @@
 .SinglePostContent {
   &__title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
   }
 
   .meta-box {
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
     display: flex;
     justify-content: space-between;
 
@@ -21,33 +21,33 @@
       align-self: center;
       flex: 1;
       h5 {
-        font-size: 14px;
-        margin-bottom: 5px;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
       }
       p {
         font-size: 12px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
     }
     &__img {
-      padding-left: 14px;
+      padding-left: 1.4rem;
       vertical-align: middle;
       align-self: center;
       display: flex;
 
       img {
-        width: 60px;
-        height: 60px;
+        width: 6rem;
+        height: 6rem;
       }
     }
   }
 
   &__content {
     * {
-      margin-bottom: 15px;
+      margin-bottom: 1.5rem;
     }
     p {
-      font-size: 14px;
+      font-size: 1.4rem;
     }
     a {
       color: $font-color-dark-blue;

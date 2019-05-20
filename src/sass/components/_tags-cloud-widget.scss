@@ -7,8 +7,8 @@
       margin: 2px;
       display: inline-block;
       background: $background-color-gray;
-      padding: 5px 10px;
-      margin-bottom: 8px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.8rem;
       transition: $transition-all-mid;
 
       @extend %background-purple-gradient-white-font-color;

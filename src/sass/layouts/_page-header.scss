@@ -8,25 +8,25 @@
   background-size: cover;
 
   &__details {
-    padding: 110px 0px;
+    padding: 11rem 0px;
     text-align: center;
 
     h1 {
-      font-size: 40px;
+      font-size: 4rem;
       font-weight: 500;
       letter-spacing: 0.1rem;
     }
 
     &__nav {
-      margin-top: 10px;
+      margin-top: 1rem;
 
       a {
         color: #fff;
         font-weight: 300;
-        font-size: 15px;
+        font-size: 1.5rem;
       }
       svg {
-        margin: 0px 10px;
+        margin: 0px 1rem;
         font-weight: 600;
       }
     }

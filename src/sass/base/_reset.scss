@@ -1,6 +1,17 @@
-a,
-a:focus,
-a:hover {
-  text-decoration: none;
-  outline: 0;
+html > body {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  a,
+  a:focus,
+  a:hover {
+    text-decoration: none;
+    outline: 0;
+  }
+
+  li {
+    list-style: none;
+  }
 }

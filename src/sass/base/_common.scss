@@ -2,109 +2,107 @@
   General Style
 */
 
-html > body {
-  color: $font-color-gray;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  position: relative;
+html {
+  font-size: 62.5%;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Rubik', sans-serif;
-    color: $font-color-black;
-    line-height: 1.2em;
-    margin-bottom: 0;
-    font-weight: 500;
-  }
-  img {
-    vertical-align: middle;
-    border-style: none;
-  }
-  ul,
-  ul * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+  & > body {
+    color: $font-color-gray;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    position: relative;
 
-  .section-gap {
-    padding: 120px 0;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Rubik', sans-serif;
+      color: $font-color-black;
+      line-height: 2rem;
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+    img {
+      vertical-align: middle;
+      border-style: none;
+    }
 
-  .gradient-bg,
-  #search_input_box,
-  .UserBox .social-links li a:hover,
-  .tags-widget ul li:hover,
-  .main_blog_details .user_details .float-left a:hover,
-  .comments-area .btn-reply:hover,
-  .blog-pagination .page-item.active .page-link,
-  .blog-pagination .page-link:hover,
-  .single-footer-widget .sub-btn {
-    background: -webkit-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    background: -moz-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    background: -o-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    background: -ms-linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    background: linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-  }
+    .section-gap {
+      padding: 120px 0;
+    }
 
-  .gradient-color,
-  .single-stories-carousel:hover h6 a,
-  .single-post-carousel:hover .post-details h2 a,
-  .SinglePostCard:hover .post-details h4 a,
-  .popular-posts-widget .single-popular-post:hover h6 a {
-    background: linear-gradient(
-      90deg,
-      $brand-color-purple 0%,
-      $brand-color-purple-secondary 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .primary-btn:hover {
-    background: $brand-color-purple;
-    color: $font-color-white;
-    border-color: $brand-color-purple;
-  }
-  .primary-btn.color {
-    background: $brand-color-purple;
-    border: 1px solid $brand-color-purple;
-    color: $font-color-white;
-  }
-  .primary-btn.color span {
-    color: $font-color-white;
-  }
-  .primary-btn.color:hover {
-    background: $background-color-light;
-    color: $font-color-black;
-    border: 1px solid $background-color-light;
-  }
-  .primary-btn.color:hover span {
-    color: $brand-color-purple;
+    .gradient-bg,
+    #search_input_box,
+    .UserBox .social-links li a:hover,
+    .tags-widget ul li:hover,
+    .main_blog_details .user_details .float-left a:hover,
+    .comments-area .btn-reply:hover,
+    .blog-pagination .page-item.active .page-link,
+    .blog-pagination .page-link:hover,
+    .single-footer-widget .sub-btn {
+      background: -webkit-linear-gradient(
+        90deg,
+        $brand-color-purple 0%,
+        $brand-color-purple-secondary 100%
+      );
+      background: -moz-linear-gradient(
+        90deg,
+        $brand-color-purple 0%,
+        $brand-color-purple-secondary 100%
+      );
+      background: -o-linear-gradient(
+        90deg,
+        $brand-color-purple 0%,
+        $brand-color-purple-secondary 100%
+      );
+      background: -ms-linear-gradient(
+        90deg,
+        $brand-color-purple 0%,
+        $brand-color-purple-secondary 100%
+      );
+      background: linear-gradient(
+        90deg,
+        $brand-color-purple 0%,
+        $brand-color-purple-secondary 100%
+      );
+    }
+
+    .gradient-color,
+    .single-stories-carousel:hover h6 a,
+    .single-post-carousel:hover .post-details h2 a,
+    .SinglePostCard:hover .post-details h4 a,
+    .popular-posts-widget .single-popular-post:hover h6 a {
+      background: linear-gradient(
+        90deg,
+        $brand-color-purple 0%,
+        $brand-color-purple-secondary 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .primary-btn:hover {
+      background: $brand-color-purple;
+      color: $font-color-white;
+      border-color: $brand-color-purple;
+    }
+    .primary-btn.color {
+      background: $brand-color-purple;
+      border: 1px solid $brand-color-purple;
+      color: $font-color-white;
+    }
+    .primary-btn.color span {
+      color: $font-color-white;
+    }
+    .primary-btn.color:hover {
+      background: $background-color-light;
+      color: $font-color-black;
+      border: 1px solid $background-color-light;
+    }
+    .primary-btn.color:hover span {
+      color: $brand-color-purple;
+    }
   }
 }

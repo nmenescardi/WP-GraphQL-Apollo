@@ -1,5 +1,5 @@
 .Header {
-  padding: 20px 0px;
+  padding: 2rem 0px;
   background: $brand-color-purple;
 
   &__menu {
@@ -10,7 +10,7 @@
     margin: 0;
 
     .Logo {
-      width: 130px;
+      width: 13rem;
 
       svg {
         fill: $font-color-white;
@@ -25,15 +25,15 @@
     display: flex;
 
     & > li {
-      margin-left: 10px;
+      margin-left: 1rem;
 
       a {
-        padding: 0 8px 0px 8px;
+        padding: 0 0.8rem 0px 0.8rem;
         text-decoration: none;
         display: inline-block;
         color: $font-color-white;
         //font-weight: 600;
-        font-size: 13px;
+        font-size: 1.3rem;
         text-transform: uppercase;
         outline: none;
         letter-spacing: 0.1rem;

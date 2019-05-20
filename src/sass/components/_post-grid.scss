@@ -2,12 +2,12 @@
   .SinglePostCard {
     position: relative;
     z-index: 1;
-    margin-bottom: 80px;
+    margin-bottom: 8rem;
 
     &__thumb {
       overflow: hidden;
       img {
-        min-height: 600px;
+        min-height: 60rem;
         width: 100%;
         object-fit: cover;
         transition: $transition-all-mid;
@@ -20,27 +20,27 @@
 
     &__details {
       position: absolute;
-      left: 30px;
-      bottom: -30px;
-      padding: 30px;
+      left: 3rem;
+      bottom: -3rem;
+      padding: 3rem;
       z-index: 1;
       background: $background-color-light;
       width: 100%;
       box-shadow: $box-shadow;
 
       h4 {
-        font-size: 20px;
-        margin-bottom: 20px;
+        font-size: 2rem;
+        margin-bottom: 2rem;
         a {
           color: $font-color-dark-blue;
         }
       }
     }
     &__meta {
-      margin-top: 15px;
+      margin-top: 1.5rem;
 
       &--item {
-        padding-right: 20px;
+        padding-right: 2rem;
         color: $font-color-gray;
 
         svg {
