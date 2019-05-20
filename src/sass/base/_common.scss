@@ -34,55 +34,6 @@ html {
       padding: 120px 0;
     }
 
-    .gradient-bg,
-    #search_input_box,
-    .UserBox .social-links li a:hover,
-    .tags-widget ul li:hover,
-    .main_blog_details .user_details .float-left a:hover,
-    .comments-area .btn-reply:hover,
-    .blog-pagination .page-item.active .page-link,
-    .blog-pagination .page-link:hover,
-    .single-footer-widget .sub-btn {
-      background: -webkit-linear-gradient(
-        90deg,
-        $brand-color-purple 0%,
-        $brand-color-purple-secondary 100%
-      );
-      background: -moz-linear-gradient(
-        90deg,
-        $brand-color-purple 0%,
-        $brand-color-purple-secondary 100%
-      );
-      background: -o-linear-gradient(
-        90deg,
-        $brand-color-purple 0%,
-        $brand-color-purple-secondary 100%
-      );
-      background: -ms-linear-gradient(
-        90deg,
-        $brand-color-purple 0%,
-        $brand-color-purple-secondary 100%
-      );
-      background: linear-gradient(
-        90deg,
-        $brand-color-purple 0%,
-        $brand-color-purple-secondary 100%
-      );
-    }
-
-    .gradient-color,
-    .single-stories-carousel:hover h6 a,
-    .single-post-carousel:hover .post-details h2 a,
-    .SinglePostCard:hover .post-details h4 a,
-    .popular-posts-widget .single-popular-post:hover h6 a {
-      background: linear-gradient(
-        90deg,
-        $brand-color-purple 0%,
-        $brand-color-purple-secondary 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
     .primary-btn:hover {
       background: $brand-color-purple;
       color: $font-color-white;

@@ -33,6 +33,10 @@
         margin-bottom: 2rem;
         a {
           color: $font-color-dark-blue;
+
+          &:hover {
+            @extend %background-purple-gradient-transparent-text;
+          }
         }
       }
     }

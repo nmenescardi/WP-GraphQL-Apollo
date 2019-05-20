@@ -14,3 +14,23 @@
     }
   }
 }
+
+%background-purple-gradient-transparent-text {
+  background: linear-gradient(
+    90deg,
+    $brand-color-purple 0%,
+    $brand-color-purple-secondary 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin overlay-hero-with-img($imgPath: './img/banner-bg.jpg') {
+  background: linear-gradient(
+      0deg,
+      $brand-color-purple-opacity,
+      $brand-color-purple-opacity
+    ),
+    url($imgPath) no-repeat center;
+  background-size: cover;
+}
