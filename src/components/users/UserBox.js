@@ -19,7 +19,7 @@ class UserBox extends Component {
   renderUserBox(user) {
     return (
       <div className="single-widget">
-        <img className="img-fluid" src={user.avatar.url} alt="" />
+        <img className="img-fluid" src={user.avatar.url} alt="User Avatar" />
         <h4 className="single-widget__title">{`${user.firstName} ${
           user.lastName
         }`}</h4>

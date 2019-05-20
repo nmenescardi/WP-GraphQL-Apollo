@@ -1,29 +1,26 @@
 import React, { Component } from 'react';
-import SinglePostCard from './SinglePostCard';
+import FeaturedPostsSingle from './FeaturedPostsSingle';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 
 const GET_POSTS = gql`
   query {
-    posts(where: { categoryNotIn: [29, 17] }) {
+    posts(first: 3, where: { categoryName: "featured" }) {
       nodes {
         id
         postId
         title
-        excerpt
-        slug
-        author {
-          id
-          nickname
-          slug
-        }
         date
+        excerpt
         featuredImage {
           sourceUrl
         }
-        comments {
-          nodes {
-            approved
+        author {
+          id
+          firstName
+          lastName
+          avatar {
+            url
           }
         }
       }
@@ -31,12 +28,12 @@ const GET_POSTS = gql`
   }
 `;
 
-export class PostGrid extends Component {
+export class FeaturedPosts extends Component {
   renderGrid(posts) {
     return posts.map(post => {
       return (
-        <div className="col-lg-6 col-md-6" key={post.id}>
-          <SinglePostCard {...post} />
+        <div className="col-md-4" key={post.id}>
+          <FeaturedPostsSingle {...post} />
         </div>
       );
     });
@@ -47,11 +44,11 @@ export class PostGrid extends Component {
     const grid = loading ? 'loading...' : this.renderGrid(posts.nodes);
 
     return (
-      <div className="PostGrid">
+      <div className="FeaturedPosts">
         <div className="row">{grid}</div>
       </div>
     );
   }
 }
 
-export default graphql(GET_POSTS)(PostGrid);
+export default graphql(GET_POSTS)(FeaturedPosts);

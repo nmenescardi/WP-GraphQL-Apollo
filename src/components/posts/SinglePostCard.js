@@ -3,6 +3,7 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import { FaRegComment } from 'react-icons/fa';
+import excerptClean from '../util/excerptClean';
 
 export class SinglePostCard extends Component {
   render() {
@@ -20,13 +21,6 @@ export class SinglePostCard extends Component {
 
     const sourceUrl = featuredImage ? featuredImage.sourceUrl : '';
 
-    const excerptClean = excerpt
-      .replace('<p>', '')
-      .replace('</p>', '')
-      .replace('[&hellip;]', '')
-      .slice(0, 90)
-      .concat('...');
-
     return (
       <div className="SinglePostCard">
         <div className="SinglePostCard__thumb">
@@ -36,7 +30,7 @@ export class SinglePostCard extends Component {
           <h4>
             <Link to={`/post/:${id}`}>{title}</Link>
           </h4>
-          <p>{excerptClean}</p>
+          <p>{excerptClean(excerpt)}</p>
           <div className="SinglePostCard__meta">
             <a href="/#" className="SinglePostCard__meta--item">
               <FaRegCalendarAlt size="1.2em" />
