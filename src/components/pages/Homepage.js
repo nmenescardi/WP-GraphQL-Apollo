@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import PostGrid from '../posts/PostGrid';
+import BreakingNewsPosts from '../posts/BreakingNewsPosts';
 import MainSidebar from '../layout/MainSidebar';
 
 export class Homepage extends Component {
   render() {
     return (
-      <main className="Homepage section-gap">
+      <main className="Homepage">
+        <div className="container-fluid">
+          <div className="row">
+            <section className="col-lg-12">
+              <BreakingNewsPosts />
+            </section>
+          </div>
+        </div>
         <div className="container">
           <div className="row">
             <section className="col-lg-8">

@@ -1,0 +1,38 @@
+.BreakingNewsPosts {
+  padding: 4rem 2rem;
+
+  .BreakingNewsPostsSingle {
+    padding: 0 2rem;
+    border-right: 1px solid $border-color-dark;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    &__thumb {
+      img {
+        width: 10rem;
+        height: 8rem;
+        max-width: none;
+      }
+    }
+
+    &__details {
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      h6 {
+        a {
+          font-size: 1.4rem;
+          color: $font-color-dark-blue;
+          font-weight: 600;
+        }
+      }
+    }
+    &__date {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+}
