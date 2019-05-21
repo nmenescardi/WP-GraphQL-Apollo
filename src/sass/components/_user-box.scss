@@ -1,4 +1,10 @@
 .UserBox {
+  img {
+    @include media-breakpoint-down(md) {
+      max-width: 30rem;
+    }
+  }
+
   &__description {
     margin-top: 2rem;
   }
