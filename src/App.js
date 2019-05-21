@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from './components/pages/Homepage';
 import Single from './components/pages/Single';
 import BlogArchive from './components/pages/BlogArchive';

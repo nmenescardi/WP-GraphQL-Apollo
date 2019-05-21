@@ -4,7 +4,6 @@ import { App } from './App';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './fonts/Linearicons-Free.eot';
 
 const client = new ApolloClient({

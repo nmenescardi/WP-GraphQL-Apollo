@@ -32,7 +32,7 @@ export class FeaturedPosts extends Component {
   renderGrid(posts) {
     return posts.map(post => {
       return (
-        <div className="col-md-4" key={post.id}>
+        <div className="col-lg-4" key={post.id}>
           <FeaturedPostsSingle {...post} />
         </div>
       );
