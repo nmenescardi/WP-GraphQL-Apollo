@@ -3,6 +3,9 @@
     @include media-breakpoint-down(md) {
       max-width: 30rem;
     }
+    @include media-breakpoint-down(xs) {
+      max-width: 100%;
+    }
   }
 
   &__description {

@@ -28,6 +28,10 @@
       width: 100%;
       box-shadow: $box-shadow;
 
+      @include media-breakpoint-down(xs) {
+        left: 0;
+      }
+
       h4 {
         font-size: 2rem;
         margin-bottom: 2rem;
