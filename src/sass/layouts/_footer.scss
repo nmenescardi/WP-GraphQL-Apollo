@@ -5,6 +5,14 @@
   .Copyright {
     text-align: center;
 
+    @include media-breakpoint-up(md) {
+      line-height: 2rem;
+
+      br {
+        display: none;
+      }
+    }
+
     &__colorlib-link {
       color: $brand-color-purple;
     }

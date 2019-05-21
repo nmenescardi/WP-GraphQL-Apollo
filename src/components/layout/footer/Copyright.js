@@ -5,8 +5,9 @@ const Copyright = () => {
   return (
     <div className="Copyright">
       <p className="Copyright__text">
-        Copyright {currentYear} © All rights reserved | This template is made
-        using{' '}
+        Copyright {currentYear} © All rights reserved{' '}
+        <span className="Copyright__separator">|</span> <br />
+        This template is made using{' '}
         <a
           className="Copyright__colorlib-link"
           href="https://colorlib.com"
