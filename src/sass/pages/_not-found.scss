@@ -1,0 +1,66 @@
+.NotFound {
+  margin-top: 2rem;
+
+  @include media-breakpoint-up(sm) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+  }
+
+  width: 100%;
+  max-width: 80rem;
+  line-height: 1.4;
+  text-align: center;
+  padding: 15px;
+
+  &__title {
+    font-size: 19rem;
+    line-height: 19rem;
+    height: 19rem;
+    font-weight: 100;
+    background: linear-gradient(
+      130deg,
+      $brand-color-purple,
+      $brand-color-purple-secondary
+    );
+    color: transparent;
+    background-clip: text;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 15rem;
+      line-height: 15rem;
+      height: 15rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 3.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+    letter-spacing: 3px;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 2.5rem;
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__lead {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+  }
+
+  &__link {
+    color: $brand-color-purple;
+    font-weight: 200;
+    text-decoration: none;
+    border-bottom: 1px dashed $brand-color-purple;
+    border-radius: 2px;
+  }
+}
