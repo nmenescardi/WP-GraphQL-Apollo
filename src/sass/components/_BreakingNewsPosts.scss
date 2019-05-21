@@ -1,5 +1,5 @@
 .BreakingNewsPosts {
-  padding: 4rem 2rem;
+  padding: 4rem 1%;
 
   .BreakingNewsPostsSingle {
     padding: 0 2rem;
@@ -8,11 +8,33 @@
     align-items: stretch;
     justify-content: space-between;
 
+    @include media-breakpoint-down(xl) {
+      padding: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 3%;
+      border: none;
+      justify-content: initial;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 8% 0;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 2%;
+    }
+
     &__thumb {
       img {
         width: 10rem;
         height: 8rem;
         max-width: none;
+        object-fit: cover;
+
+        @include media-breakpoint-down(sm) {
+          width: 12rem;
+          height: 11rem;
+        }
       }
     }
 

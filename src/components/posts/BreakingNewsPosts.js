@@ -23,7 +23,7 @@ export class BreakingNewsPosts extends Component {
   renderGrid(posts) {
     return posts.map(post => {
       return (
-        <div className="col-md-3" key={post.id}>
+        <div className="col-sm-6 col-xl-3" key={post.id}>
           {<BreakingNewsPostsSingle {...post} />}
         </div>
       );
