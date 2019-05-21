@@ -32,6 +32,10 @@ html {
 
     .section-gap {
       padding: 120px 0;
+
+      @include media-breakpoint-down(sm) {
+        padding: 10% 0;
+      }
     }
 
     .primary-btn:hover {

@@ -9,6 +9,10 @@
       font-size: 4rem;
       font-weight: 500;
       letter-spacing: 0.1rem;
+
+      @include media-breakpoint-down(xs) {
+        line-height: 4.5rem;
+      }
     }
 
     &__nav {
