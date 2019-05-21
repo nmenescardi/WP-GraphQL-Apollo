@@ -2,12 +2,20 @@
   padding: 2rem 0px;
   background: $brand-color-purple;
 
-  &__menu {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin: 0;
+
+    @include media-breakpoint-down(sm) {
+      height: 7rem;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-left: 2rem;
+    }
 
     .Logo {
       width: 13rem;
@@ -22,25 +30,187 @@
     }
   }
   .NavMenu {
-    display: flex;
+    &--desktop {
+      display: flex;
 
-    & > li {
-      margin-left: 1rem;
-
-      a {
-        padding: 0 0.8rem 0px 0.8rem;
-        text-decoration: none;
-        display: inline-block;
-        color: $font-color-white;
-        font-size: 1.3rem;
-        text-transform: uppercase;
-        outline: none;
-        letter-spacing: 0.1rem;
+      @include media-breakpoint-down(sm) {
+        display: none;
       }
 
-      &:hover > a {
-        color: $font-color-light-gray;
+      & > li {
+        margin-left: 1rem;
+
+        a {
+          padding: 0 0.8rem 0px 0.8rem;
+          text-decoration: none;
+          display: inline-block;
+          color: $font-color-white;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          outline: none;
+          letter-spacing: 0.1rem;
+        }
+
+        &:hover > a {
+          color: $font-color-light-gray;
+        }
       }
     }
+    .MobileMainMenu {
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+
+      &__button {
+        background-color: $background-color-light;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: $box-shadow-black;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+          width: 3rem;
+          height: 2px;
+          background-color: $background-color-gray-solid;
+          display: inline-block;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          transition: all 0.2s;
+        }
+
+        &::before {
+          top: -0.8rem;
+        }
+        &::after {
+          top: 0.8rem;
+        }
+      }
+
+      &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 2.5rem;
+        right: 2.5rem;
+        background-image: radial-gradient(
+          $brand-color-purple,
+          $brand-color-purple-secondary
+        );
+        z-index: 1000;
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+
+      &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+
+        li {
+          margin: 1rem;
+
+          a {
+            &:link,
+            &:visited {
+              display: inline-block;
+              font-size: 3rem;
+              font-weight: 300;
+              padding: 1rem 2rem;
+              color: $font-color-white;
+              text-decoration: none;
+              text-transform: uppercase;
+              background-image: linear-gradient(
+                120deg,
+                transparent 0%,
+                transparent 50%,
+                white 50%
+              );
+              background-size: 220%;
+              transition: all 0.4s;
+
+              span {
+                margin-right: 1.5rem;
+                display: inline-block;
+              }
+            }
+
+            &:hover,
+            &:active {
+              background-position: 100%;
+              color: $brand-color-purple;
+              transform: translateX(1rem);
+            }
+          }
+        }
+      }
+
+      &__button:hover &__icon::before {
+        top: -1rem;
+      }
+
+      &__button:hover &__icon::after {
+        top: 1rem;
+      }
+
+      // Styles for Menu Opened state
+      &.menu-opened .MobileMainMenu__background {
+        transform: scale(80);
+      }
+
+      &.menu-opened .MobileMainMenu__nav {
+        opacity: 1;
+        width: 100%;
+      }
+
+      &.menu-opened .MobileMainMenu__button .MobileMainMenu__icon {
+        background-color: transparent;
+      }
+
+      &.menu-opened .MobileMainMenu__button .MobileMainMenu__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &.menu-opened .MobileMainMenu__button .MobileMainMenu__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+    } // End NavMobile
   }
 }
