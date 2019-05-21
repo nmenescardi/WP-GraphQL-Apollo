@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './fonts/Linearicons-Free.eot';
 
 const client = new ApolloClient({
-  uri: 'http://blackbird.estudiogenba.com/graphql'
+  uri: process.env.REACT_APP_CLIENT_URI
 });
 
 ReactDOM.render(
