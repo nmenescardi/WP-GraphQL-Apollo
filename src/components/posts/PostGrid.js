@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SinglePostCard from './SinglePostCard';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { Query } from 'react-apollo';
 
 const GET_POSTS = gql`
-  query {
-    posts(where: { categoryNotIn: [29, 17] }) {
+  query GET_POSTS($skipCategories: [ID!]!) {
+    posts(where: { categoryNotIn: $skipCategories }) {
       nodes {
         id
         postId
@@ -31,27 +31,26 @@ const GET_POSTS = gql`
   }
 `;
 
-export class PostGrid extends Component {
-  renderGrid(posts) {
-    return posts.map(post => {
+const PostGrid = () => (
+  <Query query={GET_POSTS} variables={{ skipCategories: [29, 17] }}>
+    {({ loading, error, data }) => {
+      if (loading) return 'loading...';
+      if (error) return 'Error. Please try refreshing the page';
+      if (!data.posts.nodes) return '';
+
       return (
-        <div className="col-lg-6 col-md-6" key={post.id}>
-          <SinglePostCard {...post} />
+        <div className="PostGrid">
+          <div className="row">
+            {data.posts.nodes.map(post => (
+              <div className="col-lg-6 col-md-6" key={post.id}>
+                <SinglePostCard {...post} />
+              </div>
+            ))}
+          </div>
         </div>
       );
-    });
-  }
+    }}
+  </Query>
+);
 
-  render() {
-    const { loading, posts } = this.props.data;
-    const grid = loading ? 'loading...' : this.renderGrid(posts.nodes);
-
-    return (
-      <div className="PostGrid">
-        <div className="row">{grid}</div>
-      </div>
-    );
-  }
-}
-
-export default graphql(GET_POSTS)(PostGrid);
+export default PostGrid;
