@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BreakingNewsPostsSingle from './BreakingNewsPostsSingle';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { Query } from 'react-apollo';
 
-const GET_POSTS = gql`
-  query {
-    posts(first: 4, where: { categoryName: "breaking-news" }) {
+const GET_BREAKING_NEWS_POSTS = gql`
+  query BREAKING_NEWS_POSTS($count: Int!, $categorySlug: String!) {
+    posts(first: $count, where: { categoryName: $categorySlug }) {
       nodes {
         id
         postId
@@ -19,27 +19,29 @@ const GET_POSTS = gql`
   }
 `;
 
-export class BreakingNewsPosts extends Component {
-  renderGrid(posts) {
-    return posts.map(post => {
+const BreakingNewsPosts = () => (
+  <Query
+    query={GET_BREAKING_NEWS_POSTS}
+    variables={{ count: 4, categorySlug: 'breaking-news' }}
+  >
+    {({ loading, error, data }) => {
+      if (loading) return 'loading...';
+      if (error) return 'Error. Please try refreshing the page';
+      if (!data.posts.nodes) return '';
+
       return (
-        <div className="col-sm-6 col-xl-3" key={post.id}>
-          {<BreakingNewsPostsSingle {...post} />}
+        <div className="BreakingNewsPosts">
+          <div className="row">
+            {data.posts.nodes.map(post => (
+              <div className="col-sm-6 col-xl-3" key={post.id}>
+                <BreakingNewsPostsSingle {...post} />
+              </div>
+            ))}
+          </div>
         </div>
       );
-    });
-  }
+    }}
+  </Query>
+);
 
-  render() {
-    const { loading, posts } = this.props.data;
-    const grid = loading ? 'loading...' : this.renderGrid(posts.nodes);
-
-    return (
-      <div className="BreakingNewsPosts">
-        <div className="row">{grid}</div>
-      </div>
-    );
-  }
-}
-
-export default graphql(GET_POSTS)(BreakingNewsPosts);
+export default BreakingNewsPosts;
