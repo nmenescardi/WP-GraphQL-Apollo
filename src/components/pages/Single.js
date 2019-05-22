@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { Query } from 'react-apollo';
 import PageHeader from '../layout/PageHeader';
 import MainSidebar from '../layout/MainSidebar';
 import SinglePostContent from '../posts/SinglePostContent';
@@ -46,30 +46,36 @@ const GET_SINGLE_POST = gql`
   }
 `;
 
-export class Single extends Component {
-  render() {
-    const { data } = this.props;
+const Single = props => {
+  const postID = props.match.params.id;
 
-    return (
-      <Fragment>
-        <PageHeader />
-        <section className="Single section-gap">
-          <div className="container">
-            <div className="row">
-              <main className="col-lg-8">
-                {!data.loading && <SinglePostContent {...data} />}
-              </main>
-              <aside className="col-lg-4">
-                <MainSidebar />
-              </aside>
-            </div>
-          </div>
-        </section>
-      </Fragment>
-    );
-  }
-}
+  return (
+    <Query query={GET_SINGLE_POST} variables={{ postID }}>
+      {({ loading, error, data }) => {
+        if (loading) return 'loading...';
+        if (error) return 'Error. Please try refreshing the page';
+        if (!data.post) return '';
 
-export default graphql(GET_SINGLE_POST, {
-  options: props => ({ variables: { postID: props.match.params.id } })
-})(Single);
+        return (
+          <Fragment>
+            <PageHeader />
+            <section className="Single section-gap">
+              <div className="container">
+                <div className="row">
+                  <main className="col-lg-8">
+                    <SinglePostContent post={data.post} />
+                  </main>
+                  <aside className="col-lg-4">
+                    <MainSidebar />
+                  </aside>
+                </div>
+              </div>
+            </section>
+          </Fragment>
+        );
+      }}
+    </Query>
+  );
+};
+
+export default Single;

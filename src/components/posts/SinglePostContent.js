@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const SinglePostContent = ({ loading, post }) => {
+const SinglePostContent = ({ post }) => {
   const formattedDate = moment(post.date).format('DD MMMM, YYYY');
   return (
     <div className="SinglePostContent">
