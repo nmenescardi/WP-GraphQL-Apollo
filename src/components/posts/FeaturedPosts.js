@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FeaturedPostsSingle from './FeaturedPostsSingle';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { Query } from 'react-apollo';
 
-const GET_POSTS = gql`
-  query {
-    posts(first: 3, where: { categoryName: "featured" }) {
+const GET_FEATURED_POSTS = gql`
+  query GET_FEATURED_POSTS($categorySlug: String!) {
+    posts(first: 3, where: { categoryName: $categorySlug }) {
       nodes {
         id
         postId
@@ -28,27 +28,26 @@ const GET_POSTS = gql`
   }
 `;
 
-export class FeaturedPosts extends Component {
-  renderGrid(posts) {
-    return posts.map(post => {
+const FeaturedPosts = () => (
+  <Query query={GET_FEATURED_POSTS} variables={{ categorySlug: 'featured' }}>
+    {({ loading, error, data }) => {
+      if (loading) return 'loading...';
+      if (error) return 'Error. Please try refreshing the page';
+      if (!data.posts.nodes) return '';
+
       return (
-        <div className="col-lg-4" key={post.id}>
-          <FeaturedPostsSingle {...post} />
+        <div className="FeaturedPosts">
+          <div className="row no-gutters row-eq-height">
+            {data.posts.nodes.map(post => (
+              <div className="col-lg-4" key={post.id}>
+                <FeaturedPostsSingle {...post} />
+              </div>
+            ))}
+          </div>
         </div>
       );
-    });
-  }
+    }}
+  </Query>
+);
 
-  render() {
-    const { loading, posts } = this.props.data;
-    const grid = loading ? 'loading...' : this.renderGrid(posts.nodes);
-
-    return (
-      <div className="FeaturedPosts">
-        <div className="row no-gutters row-eq-height">{grid}</div>
-      </div>
-    );
-  }
-}
-
-export default graphql(GET_POSTS)(FeaturedPosts);
+export default FeaturedPosts;
