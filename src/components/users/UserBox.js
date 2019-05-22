@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { Query } from 'react-apollo';
 
 const GET_USER_BY_ID = gql`
-  query {
-    user(id: "dXNlcjoy") {
+  query GET_USER_BY_ID($userId: ID!) {
+    user(id: $userId) {
       firstName
       lastName
       description
@@ -15,25 +15,32 @@ const GET_USER_BY_ID = gql`
   }
 `;
 
-class UserBox extends Component {
-  renderUserBox(user) {
-    return (
-      <div className="single-widget">
-        <img className="img-fluid" src={user.avatar.url} alt="User Avatar" />
-        <h4 className="single-widget__title">{`${user.firstName} ${
-          user.lastName
-        }`}</h4>
-        <p className="UserBox__description">{user.description}</p>
-      </div>
-    );
-  }
+const UserBox = () => (
+  <Query query={GET_USER_BY_ID} variables={{ userId: 'dXNlcjoy' }}>
+    {({ loading, error, data }) => {
+      if (loading) return 'loading...';
+      if (error) return 'Error. Please try refreshing the page';
+      if (!data.user) return '';
 
-  render() {
-    const { loading, user } = this.props.data;
-    const mainUserBox = loading ? 'loading...' : this.renderUserBox(user);
+      const { user } = data;
 
-    return <div className="UserBox">{mainUserBox}</div>;
-  }
-}
+      return (
+        <div className="UserBox">
+          <div className="single-widget">
+            <img
+              className="img-fluid"
+              src={user.avatar.url}
+              alt="User Avatar"
+            />
+            <h4 className="single-widget__title">{`${user.firstName} ${
+              user.lastName
+            }`}</h4>
+            <p className="UserBox__description">{user.description}</p>
+          </div>
+        </div>
+      );
+    }}
+  </Query>
+);
 
-export default graphql(GET_USER_BY_ID)(UserBox);
+export default UserBox;
