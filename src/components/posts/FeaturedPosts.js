@@ -4,8 +4,8 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
 const GET_FEATURED_POSTS = gql`
-  query GET_FEATURED_POSTS($categorySlug: String!) {
-    posts(first: 3, where: { categoryName: $categorySlug }) {
+  query GET_FEATURED_POSTS($count: Int!, $categorySlug: String!) {
+    posts(first: $count, where: { categoryName: $categorySlug }) {
       nodes {
         id
         postId
@@ -29,7 +29,10 @@ const GET_FEATURED_POSTS = gql`
 `;
 
 const FeaturedPosts = () => (
-  <Query query={GET_FEATURED_POSTS} variables={{ categorySlug: 'featured' }}>
+  <Query
+    query={GET_FEATURED_POSTS}
+    variables={{ count: 3, categorySlug: 'featured' }}
+  >
     {({ loading, error, data }) => {
       if (loading) return 'loading...';
       if (error) return 'Error. Please try refreshing the page';
