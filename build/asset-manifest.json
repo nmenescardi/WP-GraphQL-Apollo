@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.10f427af.chunk.css",
+    "main.js": "/static/js/main.f1a3730d.chunk.js",
+    "main.js.map": "/static/js/main.f1a3730d.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.266e55a5.chunk.css": "/static/css/2.266e55a5.chunk.css",
+    "static/js/2.096106d3.chunk.js": "/static/js/2.096106d3.chunk.js",
+    "static/js/2.096106d3.chunk.js.map": "/static/js/2.096106d3.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.52f3b3cf156198735917d53038acf171.js": "/precache-manifest.52f3b3cf156198735917d53038acf171.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.10f427af.chunk.css.map": "/static/css/main.10f427af.chunk.css.map",
+    "static/media/Linearicons-Free.eot": "/static/media/Linearicons-Free.b9b7f23c.eot",
+    "static/media/App.scss": "/static/media/banner-bg.02e4b2d5.jpg"
+  }
+}
