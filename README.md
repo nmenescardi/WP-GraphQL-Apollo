@@ -1,4 +1,8 @@
+# WP GraphQL Apollo
+
 Hobby project connecting a WordPress site with a React App using Apollo GraphQL.
+
+It's deployed in [Heroku](http://wp-graphql-apollo.herokuapp.com/).
 
 ### Frameworks, Libraries, Resources and Methodologies used:
 
