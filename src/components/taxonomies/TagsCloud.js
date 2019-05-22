@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { Query } from 'react-apollo';
 
 const GET_TAGS = gql`
   query {
@@ -13,30 +13,29 @@ const GET_TAGS = gql`
   }
 `;
 
-class TagsCloud extends Component {
-  renderTagsCloud(tags) {
-    return tags.map(tag => {
+const TagsCloud = () => (
+  <Query query={GET_TAGS}>
+    {({ loading, error, data }) => {
+      if (loading) return 'loading...';
+      if (error) return 'Error. Please try refreshing the page';
+      if (!data.tags.nodes) return '';
+
       return (
-        <li key={tag.slug}>
-          <a href="/#">{tag.name}</a>
-        </li>
+        <div className="TagsCloud single-widget">
+          <h4 className="single-widget__title">Post Tags</h4>
+          <ul>
+            {data.tags.nodes.map(tag => {
+              return (
+                <li key={tag.slug}>
+                  <a href="/#">{tag.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       );
-    });
-  }
+    }}
+  </Query>
+);
 
-  render() {
-    const { loading, tags } = this.props.data;
-    const tagsCloudBox = loading
-      ? 'loading...'
-      : this.renderTagsCloud(tags.nodes);
-
-    return (
-      <div className="TagsCloud single-widget">
-        <h4 className="single-widget__title">Post Tags</h4>
-        <ul>{tagsCloudBox}</ul>
-      </div>
-    );
-  }
-}
-
-export default graphql(GET_TAGS)(TagsCloud);
+export default TagsCloud;
